@@ -43,6 +43,7 @@ type PadSplitProps = {|
 type View = 'editor' | 'graphiql' | 'both';
 type ModalType = 'dependencies' | 'secrets' | 'onboarding';
 
+const visitedKey = 'visited2';
 export default class PadSplit extends Component {
   props: PadSplitProps;
   state: {
@@ -54,7 +55,7 @@ export default class PadSplit extends Component {
   constructor(props: PadSplitProps) {
     super(props);
     let openModal = null;
-    let firstTime = PadStorage.getItem('global', 'visited');
+    let firstTime = PadStorage.getItem('global', visitedKey);
     if (!firstTime) {
       openModal = 'onboarding';
     }
@@ -116,7 +117,7 @@ export default class PadSplit extends Component {
   };
 
   handleOnboardingModalClose = () => {
-    PadStorage.setItem('global', 'visited', 'true');
+    PadStorage.setItem('global', visitedKey, 'true');
     this.handleModalClose();
   };
 

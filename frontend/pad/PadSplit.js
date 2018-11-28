@@ -149,37 +149,78 @@ export default class PadSplit extends Component {
   }
 
   renderModals() {
+    const goExtendLink = (
+      <a
+        href="https://goextend.io/blog/we-are-sunsetting-extend"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        discontinuing their service
+      </a>
+    );
+
+    const codeSandboxLink = (
+      <a
+        href="https://codesandbox.io/s/apollo-server"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>CodeSandbox</strong>
+      </a>
+    );
+
+    const glitchLink = (
+      <a
+        href="https://glitch.com/~apollo-launchpad"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>Glitch</strong>
+      </a>
+    );
+
+    const twitterLink = (
+      <a
+        href="https://twitter.com/apollographql"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Twitter
+      </a>
+    );
+
+    const slackLink = (
+      <a
+        href="https://www.apollographql.com/slack/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Slack
+      </a>
+    );
+
     return [
       <Modal
         key="welcome"
         isOpen={this.state.openModal === 'onboarding'}
         onRequestClose={this.handleOnboardingModalClose}
-        title="Welcome to Apollo Launchpad!"
+        shouldCloseOnOverlayClick={false}
+        title="Thanks for using Launchpad!"
       >
         <p>
-          This is a tool you can use build, deploy, and share a simple GraphQL
-          API right from your browser. We think it's a great way to experiment
-          with GraphQL and share examples of different patterns.
+          We will be sunsetting Launchpad on <strong>December 15, 2018</strong> now
+          that our hosting platform, Auth0 Extend, is {goExtendLink}. We decided to not
+          invest time into moving to another service because more full-featured
+          Apollo Server playgrounds currently exist. Please migrate all examples to
+          either {codeSandboxLink} or {glitchLink} before <strong>December 15, 2018</strong> so
+          you don't lose your work.
         </p>
 
         <p>
-          Visit the{' '}
-          <a
-            href="https://github.com/apollographql/awesome-launchpad"
-            target="_blank"
-          >
-            awesome-launchpad repository
-          </a>{' '}
-          to see a list of examples and read the docs. For an introduction, read
-          the{' '}
-          <a
-            href="https://dev-blog.apollodata.com/introducing-launchpad-the-graphql-server-demo-platform-cc4e7481fcba"
-            target="_blank"
-          >
-            announcement blog post
-          </a>.
-          {/* , or watch a quick video introducing the
-        different features. */}
+          Thanks for your support and all of your creative examples over the years!
+          We can't wait to see what you build on {codeSandboxLink} and {glitchLink}. If
+          you have any questions, please reach out to the Apollo team
+          on {twitterLink} or {slackLink}.
         </p>
 
         <div className="welcome-modal-start-wrapper">
@@ -187,7 +228,7 @@ export default class PadSplit extends Component {
             className="welcome-modal-start btn primary"
             onClick={this.handleOnboardingModalClose}
           >
-            Start using Launchpad
+            Migrate my Launchpads
           </button>
         </div>
       </Modal>,

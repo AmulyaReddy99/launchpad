@@ -209,19 +209,19 @@ export default class PadSplit extends Component {
         title="Thanks for using Launchpad!"
       >
         <p>
-          We will be sunsetting Launchpad on <strong>December 15, 2018</strong> now
-          that our hosting platform, Auth0 Extend, is {goExtendLink}. We decided to not
-          invest time into moving to another service because more full-featured
-          Apollo Server playgrounds currently exist. Please migrate all examples to
-          either {codeSandboxLink} or {glitchLink} before <strong>December 15, 2018</strong> so
-          you don't lose your work.
+          We will be sunsetting Launchpad on <strong>December 15, 2018</strong>{' '}
+          now that our hosting platform, Auth0 Extend, is {goExtendLink}. We
+          decided to not invest time into moving to another service because more
+          full-featured Apollo Server playgrounds currently exist. Please
+          migrate all examples to either {codeSandboxLink} or {glitchLink}{' '}
+          before <strong>December 15, 2018</strong> so you don't lose your work.
         </p>
 
         <p>
-          Thanks for your support and all of your creative examples over the years!
-          We can't wait to see what you build on {codeSandboxLink} and {glitchLink}. If
-          you have any questions, please reach out to the Apollo team
-          on {twitterLink} or {slackLink}.
+          Thanks for your support and all of your creative examples over the
+          years! We can't wait to see what you build on {codeSandboxLink} and{' '}
+          {glitchLink}. If you have any questions, please reach out to the
+          Apollo team on {twitterLink} or {slackLink}.
         </p>
 
         <div className="welcome-modal-start-wrapper">

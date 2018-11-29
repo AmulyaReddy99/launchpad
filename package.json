@@ -125,7 +125,7 @@
     "eslint": "eslint ./frontend/ && eslint ./server/",
     "check-prettier": "git ls-files | grep \"frontend\\|server\" | grep \"\\.(css\\|less\\|js\\|json)$\" | grep -v -f .eslintignore | xargs prettier-check --single-quote --trailing-comma all --write --write",
     "prettier": "git ls-files | grep \"frontend\\|server\" | grep \"\\.(css\\|less\\|js\\|json)$\" | grep -v -f .eslintignore | xargs prettier --single-quote --trailing-comma all --write --write",
-    "test": "npm run check-prettier && npm run eslint && jest",
+    "test": "npm run check-prettier && npm run eslint && jest --forceExit",
     "test-server": "jest server",
     "test-client": "jest frontend",
     "heroku-postbuild": "npm run build-server"
